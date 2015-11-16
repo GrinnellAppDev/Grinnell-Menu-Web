@@ -1,0 +1,18 @@
+<div class="meal" id="<%= meal_name.downcase %>">
+    
+    <h2>
+        <%= meal_name.titleize %>
+    </h2>
+    
+    <div class="stations-box">
+        <% meal.each do |station_name, station| %>
+        
+            <%= render partial: "station", 
+                       locals: { meal_name: meal_name,
+                                 station_name: station_name, 
+                                 station: station } %>
+        
+        <% end %>
+    </div>
+    
+</div>

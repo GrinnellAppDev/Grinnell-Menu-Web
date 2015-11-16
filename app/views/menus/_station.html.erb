@@ -1,0 +1,15 @@
+<div class="station" id="<%= "#{meal_name.downcase}-#{station_name.downcase}" %>">
+    
+    <h3>
+        <%= station_name %>
+    </h3>
+    
+    <ul class="dish-list">
+        
+        <% station.each do |dish| %>
+            <%= render partial: "dish", locals: { dish: dish } %>
+        <% end %>
+        
+    </ul>
+    
+</div>

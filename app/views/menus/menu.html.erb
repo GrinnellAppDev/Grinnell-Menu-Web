@@ -1,0 +1,15 @@
+<div class="header">
+    <h1>
+        Date: <%= @date %>
+    </h1>
+</div>
+
+<div class="meals-container" id="meals-container">
+    
+    <% @menu.each do |meal_name, meal| %>
+    
+        <%= render partial: "meal", locals: { meal_name: meal_name, meal: meal } %>
+    
+    <% end %>
+    
+</div>
