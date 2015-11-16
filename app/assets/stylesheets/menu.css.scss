@@ -1,0 +1,24 @@
+body {
+    background-color: maroon !important;
+}
+
+.meals-container {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.station {
+    border: 2px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    float: left;
+    width: 46%;
+    margin: 2%;
+    
+    h3 {
+        margin-top: 5px;
+    }
+}
+
