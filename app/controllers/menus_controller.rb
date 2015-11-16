@@ -3,6 +3,16 @@ require "http"
 class MenusController < ActionController::Base
   protect_from_forgery with: :exception
 
+  def todays_menu
+    today = Date.today
+
+    redirect_to menu_path(
+      year: today.year,
+      month: today.month,
+      day: today.day
+    )
+  end
+
   def menu
 
     @date = Date.new params[:year].to_i,  params[:month].to_i, params[:day].to_i

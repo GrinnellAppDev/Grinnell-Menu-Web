@@ -2,8 +2,13 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  get 'menu/:year/:month/:day' => 'menus#menu', as: :menu,
-      constraints: { year: /\d{4}/, month: /\d\d?/, day: /\d\d?/ }
+  root to: 'menus#todays_menu'
+
+  get 'menu/:year/:month/:day' => 'menus#menu', as: :menu, constraints: {
+    year: /\d{4}/,
+    month: /\d\d?/,
+    day: /\d\d?/
+  }
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
